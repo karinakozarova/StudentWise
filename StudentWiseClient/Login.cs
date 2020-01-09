@@ -41,8 +41,12 @@ namespace StudentWiseClient
             {
                 Server.Login(emailAddressTbx.Text, passwordTbx.Text);
                 this.Hide();
-                FormMain dashboard = new FormMain();
+
+                NewEvent dashboard = new NewEvent();
                 dashboard.Show();
+
+                /*FormMain dashboard = new FormMain();
+                dashboard.Show();*/
                 return;
             }
             catch (Exception ex)

@@ -12,6 +12,7 @@ namespace StudentWiseClient
 {
     public partial class NewEvent : Form
     {
+        private UserSession session;
         /// <summary>
         /// Disables Datetime pickers past dates
         /// </summary>
@@ -26,6 +27,7 @@ namespace StudentWiseClient
         {
             InitializeComponent();
             DisablePastDates();
+            this.session = Server.CurrentSession;
         }
 
         private void CreateBttn_Click(object sender, EventArgs e)
@@ -45,8 +47,9 @@ namespace StudentWiseClient
 
 
             // create new event object
-            Event newEvent = new Event(titleTbx.Text, descriptionTbx.Text, startDttpkr.Value, endDttpkr.Value);
-
+            // Event newEvent = new Event(titleTbx.Text, descriptionTbx.Text, startDttpkr.Value, endDttpkr.Value);
+            Event newEvent = Event.Create(titleTbx.Text, descriptionTbx.Text, EventType.Other, startDttpkr.Value, endDttpkr.Value, session);
+            
             // TODO: send event object to the API
         }
     }

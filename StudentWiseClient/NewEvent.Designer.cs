@@ -56,7 +56,7 @@
             this.titleTbx.Location = new System.Drawing.Point(16, 111);
             this.titleTbx.Name = "titleTbx";
             this.titleTbx.Size = new System.Drawing.Size(364, 33);
-            this.titleTbx.TabIndex = 5;
+            this.titleTbx.TabIndex = 1;
             // 
             // label2
             // 
@@ -84,7 +84,7 @@
             this.descriptionTbx.Location = new System.Drawing.Point(16, 198);
             this.descriptionTbx.Name = "descriptionTbx";
             this.descriptionTbx.Size = new System.Drawing.Size(361, 96);
-            this.descriptionTbx.TabIndex = 8;
+            this.descriptionTbx.TabIndex = 2;
             this.descriptionTbx.Text = "";
             // 
             // startDttpkr
@@ -93,7 +93,7 @@
             this.startDttpkr.Location = new System.Drawing.Point(16, 357);
             this.startDttpkr.Name = "startDttpkr";
             this.startDttpkr.Size = new System.Drawing.Size(363, 37);
-            this.startDttpkr.TabIndex = 10;
+            this.startDttpkr.TabIndex = 3;
             // 
             // descriptionLbl
             // 
@@ -131,7 +131,7 @@
             this.endDttpkr.Location = new System.Drawing.Point(16, 468);
             this.endDttpkr.Name = "endDttpkr";
             this.endDttpkr.Size = new System.Drawing.Size(363, 37);
-            this.endDttpkr.TabIndex = 13;
+            this.endDttpkr.TabIndex = 4;
             // 
             // createBttn
             // 
