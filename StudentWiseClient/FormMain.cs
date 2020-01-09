@@ -22,5 +22,12 @@ namespace StudentWiseClient
             int targetTabIndex = tsMain.Items.IndexOf(sender as ToolStripItem);
             tcMain.SelectTab(targetTabIndex);
         }
+
+        private void AddEventBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            NewEvent dashboard = new NewEvent();
+            dashboard.Show();
+        }
     }
 }

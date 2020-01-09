@@ -76,6 +76,12 @@
   <ItemGroup>
     <Compile Include="EmailValidation.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventComponent.Designer.cs">
+      <DependentUpon>EventComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="UserSession.cs" />
+    <EmbeddedResource Include="EventComponent.resx">
+      <DependentUpon>EventComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
