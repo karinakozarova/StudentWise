@@ -45,12 +45,20 @@ namespace StudentWiseClient
                 return;
             }
 
+            // validate that finish is after start
+            if (startDttpkr.Value >= endDttpkr.Value)
+            {
+                MessageBox.Show("The finish time must be after the start");
+                return;
+            }
 
-            // create new event object
-            // Event newEvent = new Event(titleTbx.Text, descriptionTbx.Text, startDttpkr.Value, endDttpkr.Value);
-            Event newEvent = Event.Create(titleTbx.Text, descriptionTbx.Text, EventType.Other, startDttpkr.Value, endDttpkr.Value, session);
-            
-            // TODO: send event object to the API
+            Event.Create(titleTbx.Text, descriptionTbx.Text, EventType.Other, startDttpkr.Value, endDttpkr.Value, session);
+            MessageBox.Show("Succesfully added your event!");
+
+            // open dashboard
+            this.Close();
+            FormMain dashboard = new FormMain();
+            dashboard.Show();
         }
     }
 }
