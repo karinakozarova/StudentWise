@@ -17,5 +17,10 @@ namespace StudentWiseClient
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
         }
+
+        public void SetTitle(int number)
+        {
+            EventTitleLbl.Text = number.ToString();
+        }
     }
 }

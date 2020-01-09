@@ -29,5 +29,22 @@ namespace StudentWiseClient
             NewEvent dashboard = new NewEvent();
             dashboard.Show();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            for(int i = 1; i < 6; i++)
+            {
+                EventComponent event1 = new EventComponent();
+                flowLayoutPanelDay1.Controls.Add(event1);
+                event1.SetTitle(i);
+            }
+            for (int i = 1; i < 3; i++)
+            {
+                EventComponent event2 = new EventComponent();
+                flowLayoutPanelDay2.Controls.Add(event2);
+                event2.SetTitle(i);
+            }
+
+        }
     }
 }
