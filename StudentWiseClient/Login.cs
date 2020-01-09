@@ -39,11 +39,8 @@ namespace StudentWiseClient
 
             try
             {
-                Server.Login(emailAddressTbx.Text, passwordTbx.Text);
+                Server.CurrentSession =  Server.Login(emailAddressTbx.Text, passwordTbx.Text);
                 this.Hide();
-
-                /*NewEvent dashboard = new NewEvent();
-                dashboard.Show();*/
 
                 FormMain dashboard = new FormMain();
                 dashboard.Show();
