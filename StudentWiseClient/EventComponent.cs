@@ -18,9 +18,33 @@ namespace StudentWiseClient
             this.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        public void SetTitle(int number)
+        public void SetTitle(String title)
         {
-            EventTitleLbl.Text = number.ToString();
+            EventTitleLbl.Text = title;
+        }
+        public void SetDescription(String description)
+        {
+            EventDescriptionLbl.Text = description;
+        }
+
+        public void SetType(EventType type)
+        {
+            EventTypeLbl.Text = type.ToString();
+        }
+
+        public void SetDealine(DateTime start, DateTime end)
+        {
+            EventDeadlineLbl.Text = $"from {start} untill {end}";
+        }
+
+        public void setEventPoints(int points = 0)
+        {
+            EventPointsLbl.Text = points.ToString();
+        }
+
+        private void CompleteEventBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -86,6 +86,7 @@
             this.CompleteEventBtn.TabIndex = 5;
             this.CompleteEventBtn.Text = "Complete";
             this.CompleteEventBtn.UseVisualStyleBackColor = false;
+            this.CompleteEventBtn.Click += new System.EventHandler(this.CompleteEventBtn_Click);
             // 
             // EventPointsLbl
             // 
