@@ -16,13 +16,6 @@ namespace StudentWiseClient
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
-            // TODO: For debugging purposes only, rm later (after this whole MR is finalized)!
-            Server.CurrentSession = Server.Login("string@string.string", "string");
-            this.Hide();
-
-            FormMain dashboard = new FormMain();
-            dashboard.Show();
         }
 
         private void ContinueBttn_Click(object sender, EventArgs e)
