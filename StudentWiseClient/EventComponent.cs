@@ -32,7 +32,7 @@ namespace StudentWiseClient
             EventTypeLbl.Text = type.ToString();
         }
 
-        public void SetDealine(DateTime start, DateTime end)
+        public void SetDeadline(DateTime? start, DateTime? end)
         {
             EventDeadlineLbl.Text = $"from {start} untill {end}";
         }
