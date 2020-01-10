@@ -39,7 +39,7 @@ namespace StudentWiseClient
             foreach (Event ev in events)
             {
                 EventComponent event1 = new EventComponent();
-                flowLayoutPanelDay1.Controls.Add(event1);
+                flowLayoutPanelToday.Controls.Add(event1);
                 event1.SetTitle(ev.Title);
                 event1.SetDescription(ev.Description);
                 event1.SetType(ev.Type);
