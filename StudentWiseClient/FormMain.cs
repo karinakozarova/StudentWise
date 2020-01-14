@@ -65,6 +65,15 @@ namespace StudentWiseClient
             }
 
             ReloadComplaints();
+
+            for(int i = 1; i < 5; i++)
+            {
+                MembersLv.Items.Add(new ListViewItem(new string[] { "Martin", "20$" }));
+                ExpensesLv.Items.Add(new ListViewItem(new string[] { "Toilet Paper", "3", "5", "new" }));
+            }
+            //MembersLv.Items.Add(new ListViewItem(new string[] { "1", "content" }));
+            //MembersLv.Items.Add(new ListViewItem(new string[] { "4", "content2" }));
+            //ExpensesLv.Items.Add(new ListViewItem(new string[] { "2", "content3" }));
         }
 
         private void ReloadComplaints()
@@ -112,6 +121,7 @@ namespace StudentWiseClient
             string expenseNotes = ExpenseNotesRtbx.Text;
             int expensePrice = Convert.ToInt32(ExpensePriceNum.Value);
             int expenseQuantity = Convert.ToInt32(ExpenseQuantityNum.Value);
+            
             //TODO: Send the created expense to the server
         }
     }
