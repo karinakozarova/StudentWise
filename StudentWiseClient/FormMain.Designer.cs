@@ -49,6 +49,7 @@
             this.flowLayoutPanelTommorow = new System.Windows.Forms.FlowLayoutPanel();
             this.TommorowEventsLbl = new System.Windows.Forms.Label();
             this.tpExpenses = new System.Windows.Forms.TabPage();
+            this.lblExpenses = new System.Windows.Forms.Label();
             this.ExpenseTotalPriceLbl = new System.Windows.Forms.Label();
             this.ExpenseTotalLbl = new System.Windows.Forms.Label();
             this.AddExpenseBtn = new System.Windows.Forms.Button();
@@ -103,8 +104,8 @@
             // 
             // tcMain
             // 
-            this.tcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tcMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tcMain.Controls.Add(this.tpDashboard);
             this.tcMain.Controls.Add(this.tpEvents);
@@ -312,6 +313,7 @@
             // 
             // tpExpenses
             // 
+            this.tpExpenses.Controls.Add(this.lblExpenses);
             this.tpExpenses.Controls.Add(this.ExpenseTotalPriceLbl);
             this.tpExpenses.Controls.Add(this.ExpenseTotalLbl);
             this.tpExpenses.Controls.Add(this.AddExpenseBtn);
@@ -336,6 +338,7 @@
             this.tpExpenses.Text = "Expenses";
             this.tpExpenses.UseVisualStyleBackColor = true;
             // 
+            // lblExpenses
             // ExpenseTotalPriceLbl
             // 
             this.ExpenseTotalPriceLbl.AutoSize = true;
@@ -359,10 +362,10 @@
             // AddExpenseBtn
             // 
             this.AddExpenseBtn.BackColor = System.Drawing.Color.LawnGreen;
-            this.AddExpenseBtn.Font = new System.Drawing.Font("Oswald", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddExpenseBtn.Location = new System.Drawing.Point(619, 390);
+            this.AddExpenseBtn.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddExpenseBtn.Location = new System.Drawing.Point(619, 380);
             this.AddExpenseBtn.Name = "AddExpenseBtn";
-            this.AddExpenseBtn.Size = new System.Drawing.Size(286, 41);
+            this.AddExpenseBtn.Size = new System.Drawing.Size(286, 53);
             this.AddExpenseBtn.TabIndex = 13;
             this.AddExpenseBtn.Text = "Add expense";
             this.AddExpenseBtn.UseVisualStyleBackColor = false;
@@ -370,23 +373,36 @@
             // 
             // ExpenseQuantityNum
             // 
-            this.ExpenseQuantityNum.Location = new System.Drawing.Point(773, 344);
+            this.ExpenseQuantityNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpenseQuantityNum.Location = new System.Drawing.Point(773, 341);
+            this.ExpenseQuantityNum.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.ExpenseQuantityNum.Name = "ExpenseQuantityNum";
-            this.ExpenseQuantityNum.Size = new System.Drawing.Size(132, 22);
+            this.ExpenseQuantityNum.Size = new System.Drawing.Size(132, 30);
             this.ExpenseQuantityNum.TabIndex = 12;
+            this.ExpenseQuantityNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ExpensePriceNum
             // 
-            this.ExpensePriceNum.Location = new System.Drawing.Point(619, 344);
+            this.ExpensePriceNum.DecimalPlaces = 2;
+            this.ExpensePriceNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpensePriceNum.Location = new System.Drawing.Point(619, 341);
             this.ExpensePriceNum.Name = "ExpensePriceNum";
-            this.ExpensePriceNum.Size = new System.Drawing.Size(126, 22);
+            this.ExpensePriceNum.Size = new System.Drawing.Size(126, 30);
             this.ExpensePriceNum.TabIndex = 11;
             // 
             // ExpenseQuantityLbl
             // 
             this.ExpenseQuantityLbl.AutoSize = true;
             this.ExpenseQuantityLbl.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpenseQuantityLbl.Location = new System.Drawing.Point(766, 300);
+            this.ExpenseQuantityLbl.Location = new System.Drawing.Point(766, 297);
             this.ExpenseQuantityLbl.Name = "ExpenseQuantityLbl";
             this.ExpenseQuantityLbl.Size = new System.Drawing.Size(97, 41);
             this.ExpenseQuantityLbl.TabIndex = 10;
@@ -396,7 +412,7 @@
             // 
             this.ExpensePriceLbl.AutoSize = true;
             this.ExpensePriceLbl.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpensePriceLbl.Location = new System.Drawing.Point(612, 300);
+            this.ExpensePriceLbl.Location = new System.Drawing.Point(612, 299);
             this.ExpensePriceLbl.Name = "ExpensePriceLbl";
             this.ExpensePriceLbl.Size = new System.Drawing.Size(69, 41);
             this.ExpensePriceLbl.TabIndex = 9;
@@ -415,7 +431,7 @@
             // ExpenseNotesRtbx
             // 
             this.ExpenseNotesRtbx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ExpenseNotesRtbx.Font = new System.Drawing.Font("Oswald", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpenseNotesRtbx.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpenseNotesRtbx.Location = new System.Drawing.Point(619, 182);
             this.ExpenseNotesRtbx.Name = "ExpenseNotesRtbx";
             this.ExpenseNotesRtbx.Size = new System.Drawing.Size(286, 115);
@@ -424,17 +440,17 @@
             // 
             // ExpenseTitleTbx
             // 
-            this.ExpenseTitleTbx.Font = new System.Drawing.Font("Oswald", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpenseTitleTbx.Location = new System.Drawing.Point(619, 108);
+            this.ExpenseTitleTbx.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpenseTitleTbx.Location = new System.Drawing.Point(619, 98);
             this.ExpenseTitleTbx.Name = "ExpenseTitleTbx";
-            this.ExpenseTitleTbx.Size = new System.Drawing.Size(286, 27);
+            this.ExpenseTitleTbx.Size = new System.Drawing.Size(286, 37);
             this.ExpenseTitleTbx.TabIndex = 6;
             // 
             // ExpenseTitleLbl
             // 
             this.ExpenseTitleLbl.AutoSize = true;
             this.ExpenseTitleLbl.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpenseTitleLbl.Location = new System.Drawing.Point(612, 64);
+            this.ExpenseTitleLbl.Location = new System.Drawing.Point(612, 59);
             this.ExpenseTitleLbl.Name = "ExpenseTitleLbl";
             this.ExpenseTitleLbl.Size = new System.Drawing.Size(62, 41);
             this.ExpenseTitleLbl.TabIndex = 5;
@@ -490,7 +506,7 @@
             // 
             this.ListOfExpensesLbl.AutoSize = true;
             this.ListOfExpensesLbl.Font = new System.Drawing.Font("Oswald", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListOfExpensesLbl.Location = new System.Drawing.Point(324, 13);
+            this.ListOfExpensesLbl.Location = new System.Drawing.Point(235, 13);
             this.ListOfExpensesLbl.Name = "ListOfExpensesLbl";
             this.ListOfExpensesLbl.Size = new System.Drawing.Size(209, 48);
             this.ListOfExpensesLbl.TabIndex = 2;
@@ -500,7 +516,7 @@
             // 
             this.MembersLbl.AutoSize = true;
             this.MembersLbl.Font = new System.Drawing.Font("Oswald", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MembersLbl.Location = new System.Drawing.Point(60, 13);
+            this.MembersLbl.Location = new System.Drawing.Point(16, 13);
             this.MembersLbl.Name = "MembersLbl";
             this.MembersLbl.Size = new System.Drawing.Size(132, 48);
             this.MembersLbl.TabIndex = 1;
@@ -521,6 +537,16 @@
             this.MembersLv.UseCompatibleStateImageBehavior = false;
             this.MembersLv.View = System.Windows.Forms.View.Details;
             // 
+            this.lblExpenses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpenses.Location = new System.Drawing.Point(0, 0);
+            this.lblExpenses.Margin = new System.Windows.Forms.Padding(0);
+            this.lblExpenses.Name = "lblExpenses";
+            this.lblExpenses.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.lblExpenses.Size = new System.Drawing.Size(949, 66);
+            this.lblExpenses.TabIndex = 2;
+            this.lblExpenses.Text = "Expenses";
+            this.lblExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // columnName
             // 
             this.columnName.Text = "Name:";
@@ -638,7 +664,7 @@
             // 
             // tsMain
             // 
-            this.tsMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tsMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tsMain.AutoSize = false;
             this.tsMain.Dock = System.Windows.Forms.DockStyle.None;
@@ -653,6 +679,7 @@
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
             this.tsMain.Padding = new System.Windows.Forms.Padding(10);
+            this.tsMain.Size = new System.Drawing.Size(953, 64);
             this.tsMain.Size = new System.Drawing.Size(953, 49);
             this.tsMain.TabIndex = 1;
             // 
@@ -663,6 +690,7 @@
             this.tsBtnDashboard.Margin = new System.Windows.Forms.Padding(0);
             this.tsBtnDashboard.Name = "tsBtnDashboard";
             this.tsBtnDashboard.Padding = new System.Windows.Forms.Padding(5);
+            this.tsBtnDashboard.Size = new System.Drawing.Size(142, 44);
             this.tsBtnDashboard.Size = new System.Drawing.Size(142, 29);
             this.tsBtnDashboard.Text = "Dashboard";
             this.tsBtnDashboard.Click += new System.EventHandler(this.TsBtn_Click);
@@ -674,6 +702,7 @@
             this.tsBtnEvents.Margin = new System.Windows.Forms.Padding(0);
             this.tsBtnEvents.Name = "tsBtnEvents";
             this.tsBtnEvents.Padding = new System.Windows.Forms.Padding(5);
+            this.tsBtnEvents.Size = new System.Drawing.Size(102, 19);
             this.tsBtnEvents.Size = new System.Drawing.Size(102, 29);
             this.tsBtnEvents.Text = "Events";
             this.tsBtnEvents.Click += new System.EventHandler(this.TsBtn_Click);
@@ -685,6 +714,7 @@
             this.tsBtnExpenses.Margin = new System.Windows.Forms.Padding(0);
             this.tsBtnExpenses.Name = "tsBtnExpenses";
             this.tsBtnExpenses.Padding = new System.Windows.Forms.Padding(5);
+            this.tsBtnExpenses.Size = new System.Drawing.Size(124, 19);
             this.tsBtnExpenses.Size = new System.Drawing.Size(124, 29);
             this.tsBtnExpenses.Text = "Expenses";
             this.tsBtnExpenses.Click += new System.EventHandler(this.TsBtn_Click);
@@ -696,6 +726,7 @@
             this.tsBtnComplaints.Margin = new System.Windows.Forms.Padding(0);
             this.tsBtnComplaints.Name = "tsBtnComplaints";
             this.tsBtnComplaints.Padding = new System.Windows.Forms.Padding(5);
+            this.tsBtnComplaints.Size = new System.Drawing.Size(145, 19);
             this.tsBtnComplaints.Size = new System.Drawing.Size(145, 29);
             this.tsBtnComplaints.Text = "Complaints";
             this.tsBtnComplaints.Click += new System.EventHandler(this.TsBtn_Click);
@@ -748,6 +779,7 @@
         private System.Windows.Forms.ToolStripButton tsBtnEvents;
         private System.Windows.Forms.ToolStripButton tsBtnExpenses;
         private System.Windows.Forms.ToolStripButton tsBtnComplaints;
+        private System.Windows.Forms.Label lblExpenses;
         private System.Windows.Forms.TabPage tpEvents;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDay1;
@@ -798,4 +830,6 @@
         private System.Windows.Forms.Label ExpenseTotalPriceLbl;
     }
 }
+
+
 
