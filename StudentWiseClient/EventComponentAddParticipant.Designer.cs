@@ -46,9 +46,9 @@
             // EventDeadlineLbl
             // 
             this.EventDeadlineLbl.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventDeadlineLbl.Location = new System.Drawing.Point(235, 13);
+            this.EventDeadlineLbl.Location = new System.Drawing.Point(367, 13);
             this.EventDeadlineLbl.Name = "EventDeadlineLbl";
-            this.EventDeadlineLbl.Size = new System.Drawing.Size(163, 66);
+            this.EventDeadlineLbl.Size = new System.Drawing.Size(211, 66);
             this.EventDeadlineLbl.TabIndex = 5;
             this.EventDeadlineLbl.Text = "Start Date and End Date";
             // 
@@ -86,7 +86,7 @@
             this.EventDescriptionLbl.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventDescriptionLbl.Location = new System.Drawing.Point(10, 133);
             this.EventDescriptionLbl.Name = "EventDescriptionLbl";
-            this.EventDescriptionLbl.Size = new System.Drawing.Size(419, 65);
+            this.EventDescriptionLbl.Size = new System.Drawing.Size(502, 65);
             this.EventDescriptionLbl.TabIndex = 9;
             this.EventDescriptionLbl.Text = "Event Description";
             // 
@@ -94,9 +94,9 @@
             // 
             this.DeleteEventPbx.BackColor = System.Drawing.Color.Red;
             this.DeleteEventPbx.Image = ((System.Drawing.Image)(resources.GetObject("DeleteEventPbx.Image")));
-            this.DeleteEventPbx.Location = new System.Drawing.Point(227, 201);
+            this.DeleteEventPbx.Location = new System.Drawing.Point(364, 213);
             this.DeleteEventPbx.Name = "DeleteEventPbx";
-            this.DeleteEventPbx.Size = new System.Drawing.Size(79, 76);
+            this.DeleteEventPbx.Size = new System.Drawing.Size(97, 91);
             this.DeleteEventPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DeleteEventPbx.TabIndex = 10;
             this.DeleteEventPbx.TabStop = false;
@@ -105,9 +105,9 @@
             // 
             this.EventCompletePbx.BackColor = System.Drawing.Color.LawnGreen;
             this.EventCompletePbx.Image = global::StudentWiseClient.Properties.Resources.kisspng_check_mark_symbol_icon_black_checkmark_5a76d35a732948_8416047115177367944717;
-            this.EventCompletePbx.Location = new System.Drawing.Point(312, 201);
+            this.EventCompletePbx.Location = new System.Drawing.Point(479, 213);
             this.EventCompletePbx.Name = "EventCompletePbx";
-            this.EventCompletePbx.Size = new System.Drawing.Size(79, 76);
+            this.EventCompletePbx.Size = new System.Drawing.Size(99, 91);
             this.EventCompletePbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EventCompletePbx.TabIndex = 11;
             this.EventCompletePbx.TabStop = false;
@@ -115,9 +115,9 @@
             // btnAddParticipant
             // 
             this.btnAddParticipant.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddParticipant.Location = new System.Drawing.Point(16, 201);
+            this.btnAddParticipant.Location = new System.Drawing.Point(16, 213);
             this.btnAddParticipant.Name = "btnAddParticipant";
-            this.btnAddParticipant.Size = new System.Drawing.Size(161, 37);
+            this.btnAddParticipant.Size = new System.Drawing.Size(251, 43);
             this.btnAddParticipant.TabIndex = 12;
             this.btnAddParticipant.Text = "Add participant";
             this.btnAddParticipant.UseVisualStyleBackColor = true;
@@ -125,9 +125,9 @@
             // ParticipantsCmb
             // 
             this.ParticipantsCmb.FormattingEnabled = true;
-            this.ParticipantsCmb.Location = new System.Drawing.Point(16, 245);
+            this.ParticipantsCmb.Location = new System.Drawing.Point(16, 262);
             this.ParticipantsCmb.Name = "ParticipantsCmb";
-            this.ParticipantsCmb.Size = new System.Drawing.Size(161, 24);
+            this.ParticipantsCmb.Size = new System.Drawing.Size(251, 24);
             this.ParticipantsCmb.TabIndex = 13;
             // 
             // EventComponentAddParticipant
@@ -144,7 +144,7 @@
             this.Controls.Add(this.ImagePbx);
             this.Controls.Add(this.EventDeadlineLbl);
             this.Name = "EventComponentAddParticipant";
-            this.Size = new System.Drawing.Size(401, 296);
+            this.Size = new System.Drawing.Size(591, 318);
             ((System.ComponentModel.ISupportInitialize)(this.ImagePbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteEventPbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EventCompletePbx)).EndInit();
