@@ -95,6 +95,12 @@
     <Compile Include="EventComponent.Designer.cs">
       <DependentUpon>EventComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventComponentAddParticipant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EventComponentAddParticipant.Designer.cs">
+      <DependentUpon>EventComponentAddParticipant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Expense.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventComponent.resx">
       <DependentUpon>EventComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventComponentAddParticipant.resx">
+      <DependentUpon>EventComponentAddParticipant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
