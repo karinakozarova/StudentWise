@@ -53,16 +53,13 @@ namespace StudentWiseClient
                 return;
             }
 
-            // validate that finish is after start
-            if (startDateTime.Date >= endDateTime.Date)
+            if (startDateTime.TimeOfDay >= endDateTime.TimeOfDay)
             {
                 MessageBox.Show("The finish time must be after the start");
                 return;
             }
 
-            var ev = Event.Create(titleTbx.Text, descriptionTbx.Text, EventType.Other, startDateTime, endDateTime, session);
-            //ev.AddParticipant(Server.CurrentSession.Info.Id);
-            MessageBox.Show("Succesfully added your event!");
+            Event.Create(titleTbx.Text, descriptionTbx.Text, EventType.Other, startDateTime, endDateTime, session);
 
             // open dashboard
             this.Close();

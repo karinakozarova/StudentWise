@@ -17,10 +17,6 @@ namespace StudentWiseClient
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
-           /* foreach (User user in User.Enumerate())
-            {
-                ParticipantsCmb.Items.Add(user.FirstName);
-            }*/
         }
 
         public UserSession Session
@@ -41,7 +37,7 @@ namespace StudentWiseClient
             set;
         }
 
-        public Event Event
+        public Event CurrentEvent
         {
             get;
             set;
@@ -49,7 +45,7 @@ namespace StudentWiseClient
 
         public void SetEvent(Event eventParam)
         {
-            this.Event = eventParam;
+            this.CurrentEvent = eventParam;
         }
 
 
@@ -80,11 +76,11 @@ namespace StudentWiseClient
             ParticipantsCmb.Items.Clear();
 
             List<User> users = User.Enumerate();
-            List<User> participants = Event.Participants;
+            List<User> participants = CurrentEvent.Participants;
 
             List<User> result = users.Except(participants).ToList();
 
-            foreach(User user in result)
+            foreach (User user in result)
             {
                 ParticipantsCmb.Items.Add(user.FirstName);
             }
@@ -138,15 +134,21 @@ namespace StudentWiseClient
         private void BtnAddParticipant_Click_1(object sender, EventArgs e)
         {
             int userID = 0;
-            foreach (User user in User.Enumerate())
+            List<User> users = User.Enumerate();
+            List<User> participants = CurrentEvent.Participants;
+            List<User> result = users.Except(participants).ToList();
+            foreach (User user in result)
             {
-                if (user.FirstName == ParticipantsCmb.SelectedItem.ToString())
+                if (ParticipantsCmb.SelectedIndex == -1) continue;
+                string selected = ParticipantsCmb.SelectedItem.ToString();
+                if (user.FirstName == selected)
                 {
                     userID = user.Id;
-                    Event.AddParticipant(this.Id, userID, this.Session);
+                    CurrentEvent.AddParticipant(userID, this.Session);
                     ReloadParticipants();
                 }
             }
+
         }
     }
 }
