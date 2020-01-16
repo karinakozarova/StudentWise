@@ -81,6 +81,17 @@
             this.titleLbl = new System.Windows.Forms.Label();
             this.newComplaintLbl = new System.Windows.Forms.Label();
             this.complaintsLbl = new System.Windows.Forms.Label();
+            this.tpCreatedEvents = new System.Windows.Forms.TabPage();
+            this.tbAgreements = new System.Windows.Forms.TabPage();
+            this.agreementsFlpnl = new System.Windows.Forms.FlowLayoutPanel();
+            this.agreemeentsLBl = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.newAgreementBttn = new System.Windows.Forms.Button();
+            this.agreementTitleTbx = new System.Windows.Forms.TextBox();
+            this.agreementDescriprionTbx = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.newAgreementLbl = new System.Windows.Forms.Label();
             this.tsMain = new System.Windows.Forms.ToolStrip();
             this.timeNowTimer = new System.Windows.Forms.Timer(this.components);
             this.tpCreatedEvents = new System.Windows.Forms.TabPage();
@@ -92,6 +103,8 @@
             this.tsBtnExpenses = new System.Windows.Forms.ToolStripButton();
             this.tsBtnComplaints = new System.Windows.Forms.ToolStripButton();
             this.CreatedEventsLbl = new System.Windows.Forms.Label();
+            this.tsAgreementBttn = new System.Windows.Forms.ToolStripButton();
+            this.timeNowTimer = new System.Windows.Forms.Timer(this.components);
             this.tcMain.SuspendLayout();
             this.tpDashboard.SuspendLayout();
             this.tpEvents.SuspendLayout();
@@ -103,6 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExpensePriceNum)).BeginInit();
             this.tpComplaints.SuspendLayout();
             this.newComplaintGb.SuspendLayout();
+            this.tbAgreements.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tsMain.SuspendLayout();
             this.tpCreatedEvents.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +133,9 @@
             this.tcMain.Controls.Add(this.tpComplaints);
             this.tcMain.Controls.Add(this.tpCreatedEvents);
             this.tcMain.Location = new System.Drawing.Point(-1, 39);
+            this.tcMain.Controls.Add(this.tbAgreements);
+            this.tcMain.Controls.Add(this.tpCreatedEvents);
+            this.tcMain.Location = new System.Drawing.Point(0, 39);
             this.tcMain.Margin = new System.Windows.Forms.Padding(0);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
@@ -654,6 +672,121 @@
             this.complaintsLbl.TabIndex = 0;
             this.complaintsLbl.Text = "Complaints:";
             // 
+            // tpCreatedEvents
+            // 
+            this.tpCreatedEvents.Location = new System.Drawing.Point(4, 25);
+            this.tpCreatedEvents.Name = "tpCreatedEvents";
+            this.tpCreatedEvents.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCreatedEvents.Size = new System.Drawing.Size(949, 446);
+            this.tpCreatedEvents.TabIndex = 5;
+            this.tpCreatedEvents.Text = "tpCreatedEvents";
+            this.tpCreatedEvents.UseVisualStyleBackColor = true;
+            // 
+            // tbAgreements
+            // 
+            this.tbAgreements.Controls.Add(this.agreementsFlpnl);
+            this.tbAgreements.Controls.Add(this.agreemeentsLBl);
+            this.tbAgreements.Controls.Add(this.groupBox1);
+            this.tbAgreements.Location = new System.Drawing.Point(4, 25);
+            this.tbAgreements.Name = "tbAgreements";
+            this.tbAgreements.Size = new System.Drawing.Size(949, 446);
+            this.tbAgreements.TabIndex = 4;
+            this.tbAgreements.Text = "Agreements";
+            this.tbAgreements.UseVisualStyleBackColor = true;
+            // 
+            // agreementsFlpnl
+            // 
+            this.agreementsFlpnl.AutoScroll = true;
+            this.agreementsFlpnl.Location = new System.Drawing.Point(22, 68);
+            this.agreementsFlpnl.Name = "agreementsFlpnl";
+            this.agreementsFlpnl.Size = new System.Drawing.Size(500, 361);
+            this.agreementsFlpnl.TabIndex = 5;
+            // 
+            // agreemeentsLBl
+            // 
+            this.agreemeentsLBl.AutoSize = true;
+            this.agreemeentsLBl.Font = new System.Drawing.Font("Oswald", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agreemeentsLBl.Location = new System.Drawing.Point(14, 17);
+            this.agreemeentsLBl.Name = "agreemeentsLBl";
+            this.agreemeentsLBl.Size = new System.Drawing.Size(147, 48);
+            this.agreemeentsLBl.TabIndex = 3;
+            this.agreemeentsLBl.Text = "Agreements:";
+            this.agreemeentsLBl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.newAgreementBttn);
+            this.groupBox1.Controls.Add(this.agreementTitleTbx);
+            this.groupBox1.Controls.Add(this.agreementDescriprionTbx);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.newAgreementLbl);
+            this.groupBox1.Location = new System.Drawing.Point(537, 17);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(397, 412);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // newAgreementBttn
+            // 
+            this.newAgreementBttn.BackColor = System.Drawing.Color.SpringGreen;
+            this.newAgreementBttn.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newAgreementBttn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.newAgreementBttn.Location = new System.Drawing.Point(24, 343);
+            this.newAgreementBttn.Name = "newAgreementBttn";
+            this.newAgreementBttn.Size = new System.Drawing.Size(347, 50);
+            this.newAgreementBttn.TabIndex = 3;
+            this.newAgreementBttn.Text = "Create Agreement";
+            this.newAgreementBttn.UseVisualStyleBackColor = false;
+            this.newAgreementBttn.Click += new System.EventHandler(this.NewAgreementBttn_Click);
+            // 
+            // agreementTitleTbx
+            // 
+            this.agreementTitleTbx.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agreementTitleTbx.Location = new System.Drawing.Point(24, 122);
+            this.agreementTitleTbx.Name = "agreementTitleTbx";
+            this.agreementTitleTbx.Size = new System.Drawing.Size(347, 37);
+            this.agreementTitleTbx.TabIndex = 1;
+            // 
+            // agreementDescriprionTbx
+            // 
+            this.agreementDescriprionTbx.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agreementDescriprionTbx.Location = new System.Drawing.Point(24, 212);
+            this.agreementDescriprionTbx.Name = "agreementDescriprionTbx";
+            this.agreementDescriprionTbx.Size = new System.Drawing.Size(347, 112);
+            this.agreementDescriprionTbx.TabIndex = 2;
+            this.agreementDescriprionTbx.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 168);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 41);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Description:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Oswald", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 41);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Title:";
+            // 
+            // newAgreementLbl
+            // 
+            this.newAgreementLbl.AutoSize = true;
+            this.newAgreementLbl.Font = new System.Drawing.Font("Oswald", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newAgreementLbl.Location = new System.Drawing.Point(16, 18);
+            this.newAgreementLbl.Name = "newAgreementLbl";
+            this.newAgreementLbl.Size = new System.Drawing.Size(184, 48);
+            this.newAgreementLbl.TabIndex = 1;
+            this.newAgreementLbl.Text = "New agreement:";
+            // 
             // tsMain
             // 
             this.tsMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -667,7 +800,8 @@
             this.tsBtnDashboard,
             this.tsBtnEvents,
             this.tsBtnExpenses,
-            this.tsBtnComplaints});
+            this.tsBtnComplaints,
+            this.tsAgreementBttn});
             this.tsMain.Location = new System.Drawing.Point(0, 0);
             this.tsMain.Name = "tsMain";
             this.tsMain.Padding = new System.Windows.Forms.Padding(10);
@@ -762,7 +896,18 @@
             this.tsBtnComplaints.Text = "Complaints";
             this.tsBtnComplaints.Click += new System.EventHandler(this.TsBtn_Click);
             // 
-            // CreatedEventsLbl
+            // tsAgreementBttn
+            // 
+            this.tsAgreementBttn.Image = ((System.Drawing.Image)(resources.GetObject("tsAgreementBttn.Image")));
+            this.tsAgreementBttn.ImageTransparentColor = System.Drawing.SystemColors.Window;
+            this.tsAgreementBttn.Margin = new System.Windows.Forms.Padding(0);
+            this.tsAgreementBttn.Name = "tsAgreementBttn";
+            this.tsAgreementBttn.Padding = new System.Windows.Forms.Padding(5);
+            this.tsAgreementBttn.Size = new System.Drawing.Size(151, 29);
+            this.tsAgreementBttn.Text = "Agreements";
+            this.tsAgreementBttn.Click += new System.EventHandler(this.TsBtn_Click);
+            // 
+            // timeNowTimer
             // 
             this.CreatedEventsLbl.AutoSize = true;
             this.CreatedEventsLbl.Font = new System.Drawing.Font("Oswald", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -798,6 +943,10 @@
             this.tpComplaints.PerformLayout();
             this.newComplaintGb.ResumeLayout(false);
             this.newComplaintGb.PerformLayout();
+            this.tbAgreements.ResumeLayout(false);
+            this.tbAgreements.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tsMain.ResumeLayout(false);
             this.tsMain.PerformLayout();
             this.tpCreatedEvents.ResumeLayout(false);
@@ -870,6 +1019,18 @@
         private System.Windows.Forms.TabPage tpCreatedEvents;
         private System.Windows.Forms.FlowLayoutPanel CreatedEventsFllpnl;
         private System.Windows.Forms.Label CreatedEventsLbl;
+        private System.Windows.Forms.TabPage tbAgreements;
+        private System.Windows.Forms.FlowLayoutPanel agreementsFlpnl;
+        private System.Windows.Forms.Label agreemeentsLBl;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button newAgreementBttn;
+        private System.Windows.Forms.TextBox agreementTitleTbx;
+        private System.Windows.Forms.RichTextBox agreementDescriprionTbx;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label newAgreementLbl;
+        private System.Windows.Forms.ToolStripButton tsAgreementBttn;
+        private System.Windows.Forms.TabPage tpCreatedEvents;
     }
 }
 
