@@ -114,20 +114,22 @@
             // 
             // btnAddParticipant
             // 
-            this.btnAddParticipant.Font = new System.Drawing.Font("Oswald", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddParticipant.Location = new System.Drawing.Point(16, 213);
+            this.btnAddParticipant.Font = new System.Drawing.Font("Oswald", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddParticipant.Location = new System.Drawing.Point(16, 249);
             this.btnAddParticipant.Name = "btnAddParticipant";
-            this.btnAddParticipant.Size = new System.Drawing.Size(251, 43);
+            this.btnAddParticipant.Size = new System.Drawing.Size(298, 55);
             this.btnAddParticipant.TabIndex = 12;
             this.btnAddParticipant.Text = "Add participant";
             this.btnAddParticipant.UseVisualStyleBackColor = true;
+            this.btnAddParticipant.Click += new System.EventHandler(this.BtnAddParticipant_Click_1);
             // 
             // ParticipantsCmb
             // 
+            this.ParticipantsCmb.Font = new System.Drawing.Font("Oswald", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ParticipantsCmb.FormattingEnabled = true;
-            this.ParticipantsCmb.Location = new System.Drawing.Point(16, 262);
+            this.ParticipantsCmb.Location = new System.Drawing.Point(16, 201);
             this.ParticipantsCmb.Name = "ParticipantsCmb";
-            this.ParticipantsCmb.Size = new System.Drawing.Size(251, 24);
+            this.ParticipantsCmb.Size = new System.Drawing.Size(298, 43);
             this.ParticipantsCmb.TabIndex = 13;
             // 
             // EventComponentAddParticipant

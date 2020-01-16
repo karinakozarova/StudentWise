@@ -17,10 +17,10 @@ namespace StudentWiseClient
         {
             InitializeComponent();
             this.BorderStyle = BorderStyle.FixedSingle;
-            foreach (User user in User.Enumerate())
+           /* foreach (User user in User.Enumerate())
             {
                 ParticipantsCmb.Items.Add(user.FirstName);
-            }
+            }*/
         }
 
         public UserSession Session
@@ -41,6 +41,18 @@ namespace StudentWiseClient
             set;
         }
 
+        public Event Event
+        {
+            get;
+            set;
+        }
+
+        public void SetEvent(Event eventParam)
+        {
+            this.Event = eventParam;
+        }
+
+
         public void SetAllNeededProperties(int id, User creator, UserSession session, String title, String description, EventType type, DateTime? start, DateTime? end, int points = 0)
         {
             this.SetTitle(title);
@@ -58,6 +70,23 @@ namespace StudentWiseClient
             else
             {
                 DeleteEventPbx.Visible = true;
+            }
+
+            ReloadParticipants();
+        }
+
+        private void ReloadParticipants()
+        {
+            ParticipantsCmb.Items.Clear();
+
+            List<User> users = User.Enumerate();
+            List<User> participants = Event.Participants;
+
+            List<User> result = users.Except(participants).ToList();
+
+            foreach(User user in result)
+            {
+                ParticipantsCmb.Items.Add(user.FirstName);
             }
         }
 
@@ -79,7 +108,6 @@ namespace StudentWiseClient
         {
             EventDeadlineLbl.Text = $"from {start} untill {end}";
         }
-
 
         private void DeleteEventPbx_Click(object sender, EventArgs e)
         {
@@ -107,17 +135,18 @@ namespace StudentWiseClient
             //this.Enabled = false;
         }
 
-        private void BtnAddParticipant_Click(object sender, EventArgs e)
+        private void BtnAddParticipant_Click_1(object sender, EventArgs e)
         {
             int userID = 0;
-            foreach(User user in User.Enumerate())
+            foreach (User user in User.Enumerate())
             {
-                if(user.FirstName == ParticipantsCmb.SelectedItem.ToString())
+                if (user.FirstName == ParticipantsCmb.SelectedItem.ToString())
                 {
                     userID = user.Id;
+                    Event.AddParticipant(this.Id, userID, this.Session);
+                    ReloadParticipants();
                 }
             }
-            Event.AddParticipant(this.Id, userID, this.Session);
         }
     }
 }

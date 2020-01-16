@@ -151,8 +151,10 @@ namespace StudentWiseClient
                     //var dateAndTime = DateTime.Now;
                     //var dateNow = dateAndTime.Date;
                     EventComponentAddParticipant eventComponent = new EventComponentAddParticipant();
+                    eventComponent.SetEvent(ev);
                     eventComponent.SetAllNeededProperties(ev.Id, ev.Creator, Server.CurrentSession, ev.Title, ev.Description, ev.Type, ev.StartsAt, ev.FinishesAt);
-                    if(eventComponent.Creator.Id == eventComponent.Session.Info.Id)
+
+                    if (eventComponent.Creator.Id == eventComponent.Session.Info.Id)
                     {
                         CreatedEventsFllpnl.Controls.Add(eventComponent);
                     }
