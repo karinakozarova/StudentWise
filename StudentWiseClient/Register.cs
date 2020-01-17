@@ -62,7 +62,7 @@ namespace StudentWiseClient
                 FormMain dashboard = new FormMain();
                 dashboard.Show();
             } catch(Exception ex){
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
         }
 
